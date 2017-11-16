@@ -1,0 +1,152 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.3.4 (libNeuroML v0.2.34)
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="Sim_SimpleNet"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="SimpleNet/RS.cell.nml"/>
+    <Include file="SimpleNet.net.nml"/>
+   
+    <Simulation id="Sim_SimpleNet" length="3000ms" step="0.025ms" target="SimpleNet" seed="12345">  <!-- Note seed: ensures same random numbers used every run -->
+        
+        <Display id="DispPop__pop0" title="Membrane potentials of cells in pop0" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-90" ymax="50">
+            <Line id="pop0[0]: v" quantity="pop0/0/RS/v" scale="1mV" color="#6aa799" timeScale="1ms"/>
+            <Line id="pop0[1]: v" quantity="pop0/1/RS/v" scale="1mV" color="#029a72" timeScale="1ms"/>
+            <Line id="pop0[2]: v" quantity="pop0/2/RS/v" scale="1mV" color="#d340bb" timeScale="1ms"/>
+            <Line id="pop0[3]: v" quantity="pop0/3/RS/v" scale="1mV" color="#4c73a9" timeScale="1ms"/>
+            <Line id="pop0[4]: v" quantity="pop0/4/RS/v" scale="1mV" color="#5e503a" timeScale="1ms"/>
+            <Line id="pop0[5]: v" quantity="pop0/5/RS/v" scale="1mV" color="#3193ca" timeScale="1ms"/>
+            <Line id="pop0[6]: v" quantity="pop0/6/RS/v" scale="1mV" color="#90e5e9" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="DispPop__pop1" title="Membrane potentials of cells in pop1" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-90" ymax="50">
+            <Line id="pop1[0]: v" quantity="pop1/0/RS/v" scale="1mV" color="#29645f" timeScale="1ms"/>
+            <Line id="pop1[1]: v" quantity="pop1/1/RS/v" scale="1mV" color="#1fcff4" timeScale="1ms"/>
+            <Line id="pop1[2]: v" quantity="pop1/2/RS/v" scale="1mV" color="#6ed4e9" timeScale="1ms"/>
+            <Line id="pop1[3]: v" quantity="pop1/3/RS/v" scale="1mV" color="#8fe460" timeScale="1ms"/>
+            <Line id="pop1[4]: v" quantity="pop1/4/RS/v" scale="1mV" color="#2ca1c7" timeScale="1ms"/>
+            <Line id="pop1[5]: v" quantity="pop1/5/RS/v" scale="1mV" color="#8d9fe5" timeScale="1ms"/>
+            <Line id="pop1[6]: v" quantity="pop1/6/RS/v" scale="1mV" color="#5adad1" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Conds" title="Conds" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-0.1" ymax="1.6">
+            <Line id="AMPA_g_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/AMPA/g" scale="1nS" color="#f543bb" timeScale="1ms"/>
+            <Line id="AMPA_g_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/AMPA/g" scale="1nS" color="#30a1f6" timeScale="1ms"/>
+            <Line id="AMPA_g_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/AMPA/g" scale="1nS" color="#00e266" timeScale="1ms"/>
+            <Line id="AMPA_g_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/AMPA/g" scale="1nS" color="#e2b284" timeScale="1ms"/>
+            <Line id="AMPA_g_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/AMPA/g" scale="1nS" color="#ce9fb6" timeScale="1ms"/>
+            <Line id="AMPA_g_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/AMPA/g" scale="1nS" color="#96af0d" timeScale="1ms"/>
+            <Line id="AMPA_g_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/AMPA/g" scale="1nS" color="#267841" timeScale="1ms"/>
+            <Line id="NMDA_g_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/NMDA/g" scale="1nS" color="#141cb0" timeScale="1ms"/>
+            <Line id="NMDA_g_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/NMDA/g" scale="1nS" color="#c9f0b0" timeScale="1ms"/>
+            <Line id="NMDA_g_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/NMDA/g" scale="1nS" color="#adbfb0" timeScale="1ms"/>
+            <Line id="NMDA_g_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/NMDA/g" scale="1nS" color="#0fc01b" timeScale="1ms"/>
+            <Line id="NMDA_g_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/NMDA/g" scale="1nS" color="#9c2ecc" timeScale="1ms"/>
+            <Line id="NMDA_g_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/NMDA/g" scale="1nS" color="#339bb4" timeScale="1ms"/>
+            <Line id="NMDA_g_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/NMDA/g" scale="1nS" color="#8e7ae9" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Currs" title="Currs" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-0.1" ymax="1.6">
+            <Line id="AMPA_i_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/AMPA/i" scale="1pA" color="#175f0c" timeScale="1ms"/>
+            <Line id="AMPA_i_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/AMPA/i" scale="1pA" color="#577081" timeScale="1ms"/>
+            <Line id="AMPA_i_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/AMPA/i" scale="1pA" color="#f0b378" timeScale="1ms"/>
+            <Line id="AMPA_i_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/AMPA/i" scale="1pA" color="#93fd72" timeScale="1ms"/>
+            <Line id="AMPA_i_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/AMPA/i" scale="1pA" color="#3b788b" timeScale="1ms"/>
+            <Line id="AMPA_i_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/AMPA/i" scale="1pA" color="#84ab56" timeScale="1ms"/>
+            <Line id="AMPA_i_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/AMPA/i" scale="1pA" color="#3aa725" timeScale="1ms"/>
+            <Line id="NMDA_i_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/NMDA/i" scale="1pA" color="#fe9e62" timeScale="1ms"/>
+            <Line id="NMDA_i_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/NMDA/i" scale="1pA" color="#c5bc64" timeScale="1ms"/>
+            <Line id="NMDA_i_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/NMDA/i" scale="1pA" color="#c2e1da" timeScale="1ms"/>
+            <Line id="NMDA_i_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/NMDA/i" scale="1pA" color="#a04859" timeScale="1ms"/>
+            <Line id="NMDA_i_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/NMDA/i" scale="1pA" color="#6bbb69" timeScale="1ms"/>
+            <Line id="NMDA_i_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/NMDA/i" scale="1pA" color="#c4d3c5" timeScale="1ms"/>
+            <Line id="NMDA_i_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/NMDA/i" scale="1pA" color="#147de9" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="NMDA_block" title="NMDA_block" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-0.1" ymax="1.1">
+            <Line id="NMDA_block_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/NMDA/blockFactor" scale="1" color="#ebaa77" timeScale="1ms"/>
+            <Line id="NMDA_block_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/NMDA/blockFactor" scale="1" color="#5e2503" timeScale="1ms"/>
+            <Line id="NMDA_block_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/NMDA/blockFactor" scale="1" color="#7b1427" timeScale="1ms"/>
+            <Line id="NMDA_block_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/NMDA/blockFactor" scale="1" color="#53650f" timeScale="1ms"/>
+            <Line id="NMDA_block_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/NMDA/blockFactor" scale="1" color="#f3d90e" timeScale="1ms"/>
+            <Line id="NMDA_block_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/NMDA/blockFactor" scale="1" color="#b2d4f3" timeScale="1ms"/>
+            <Line id="NMDA_block_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/NMDA/blockFactor" scale="1" color="#2a3a46" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="AMPA_plast" title="AMPA_plast" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-80" ymax="30">
+            <Line id="AMPA_u_pot_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot" scale="1mV" color="#fa8826" timeScale="1ms"/>
+            <Line id="AMPA_u1_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_1" scale="1mV" color="#6980a8" timeScale="1ms"/>
+            <Line id="AMPA_u_pot_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot" scale="1mV" color="#06057c" timeScale="1ms"/>
+            <Line id="AMPA_u1_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_1" scale="1mV" color="#56eaa3" timeScale="1ms"/>
+            <Line id="AMPA_u_pot_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot" scale="1mV" color="#deea95" timeScale="1ms"/>
+            <Line id="AMPA_u1_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_1" scale="1mV" color="#c55566" timeScale="1ms"/>
+            <Line id="AMPA_u_pot_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot" scale="1mV" color="#bc90a6" timeScale="1ms"/>
+            <Line id="AMPA_u1_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_1" scale="1mV" color="#3b8d0e" timeScale="1ms"/>
+            <Line id="AMPA_u_pot_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot" scale="1mV" color="#df8960" timeScale="1ms"/>
+            <Line id="AMPA_u1_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_1" scale="1mV" color="#3764b5" timeScale="1ms"/>
+            <Line id="AMPA_u_pot_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot" scale="1mV" color="#f56ae7" timeScale="1ms"/>
+            <Line id="AMPA_u1_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_1" scale="1mV" color="#0aa250" timeScale="1ms"/>
+            <Line id="AMPA_u_pot_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot" scale="1mV" color="#8a04f7" timeScale="1ms"/>
+            <Line id="AMPA_u1_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_1" scale="1mV" color="#282fe5" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="AMPA_diff" title="AMPA_diff" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-10" ymax="30">
+            <Line id="AMPA_pot_diff_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot_diff" scale="1mV" color="#8101e8" timeScale="1ms"/>
+            <Line id="AMPA_v_diff_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/AMPA/stdp/v_diff" scale="1mV" color="#25ece8" timeScale="1ms"/>
+            <Line id="AMPA_pot_diff_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot_diff" scale="1mV" color="#f7acee" timeScale="1ms"/>
+            <Line id="AMPA_v_diff_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/AMPA/stdp/v_diff" scale="1mV" color="#fa9289" timeScale="1ms"/>
+            <Line id="AMPA_pot_diff_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot_diff" scale="1mV" color="#2dcaab" timeScale="1ms"/>
+            <Line id="AMPA_v_diff_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/AMPA/stdp/v_diff" scale="1mV" color="#1978ce" timeScale="1ms"/>
+            <Line id="AMPA_pot_diff_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot_diff" scale="1mV" color="#860a7d" timeScale="1ms"/>
+            <Line id="AMPA_v_diff_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/AMPA/stdp/v_diff" scale="1mV" color="#b59a59" timeScale="1ms"/>
+            <Line id="AMPA_pot_diff_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot_diff" scale="1mV" color="#cd4944" timeScale="1ms"/>
+            <Line id="AMPA_v_diff_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/AMPA/stdp/v_diff" scale="1mV" color="#8e1a11" timeScale="1ms"/>
+            <Line id="AMPA_pot_diff_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot_diff" scale="1mV" color="#2a04f7" timeScale="1ms"/>
+            <Line id="AMPA_v_diff_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/AMPA/stdp/v_diff" scale="1mV" color="#fbb911" timeScale="1ms"/>
+            <Line id="AMPA_pot_diff_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/AMPA/stdp/u_pot_diff" scale="1mV" color="#52e1fb" timeScale="1ms"/>
+            <Line id="AMPA_v_diff_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/AMPA/stdp/v_diff" scale="1mV" color="#0ca02f" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="AMPA_plast_factor" title="AMPA_plast_factor" timeScale="1ms" xmin="-300.0" xmax="3300.0" ymin="-0.1" ymax="1.1">
+            <Line id="AMPA_p_0" quantity="pop1/0/RS/synapses:AMPA_NMDA:0/AMPA/stdp/plasticityFactor" scale="1" color="#b80e3b" timeScale="1ms"/>
+            <Line id="AMPA_p_1" quantity="pop1/1/RS/synapses:AMPA_NMDA:0/AMPA/stdp/plasticityFactor" scale="1" color="#be9985" timeScale="1ms"/>
+            <Line id="AMPA_p_2" quantity="pop1/2/RS/synapses:AMPA_NMDA:0/AMPA/stdp/plasticityFactor" scale="1" color="#6a1ecc" timeScale="1ms"/>
+            <Line id="AMPA_p_3" quantity="pop1/3/RS/synapses:AMPA_NMDA:0/AMPA/stdp/plasticityFactor" scale="1" color="#d32851" timeScale="1ms"/>
+            <Line id="AMPA_p_4" quantity="pop1/4/RS/synapses:AMPA_NMDA:0/AMPA/stdp/plasticityFactor" scale="1" color="#2f9272" timeScale="1ms"/>
+            <Line id="AMPA_p_5" quantity="pop1/5/RS/synapses:AMPA_NMDA:0/AMPA/stdp/plasticityFactor" scale="1" color="#d50b61" timeScale="1ms"/>
+            <Line id="AMPA_p_6" quantity="pop1/6/RS/synapses:AMPA_NMDA:0/AMPA/stdp/plasticityFactor" scale="1" color="#b6307b" timeScale="1ms"/>
+        </Display>
+        
+        <OutputFile id="Volts_file__pop0" fileName="Sim_SimpleNet.pop0.v.dat">
+            <OutputColumn id="v_pop0_0_RS_v" quantity="pop0/0/RS/v"/> 
+            <OutputColumn id="v_pop0_1_RS_v" quantity="pop0/1/RS/v"/> 
+            <OutputColumn id="v_pop0_2_RS_v" quantity="pop0/2/RS/v"/> 
+            <OutputColumn id="v_pop0_3_RS_v" quantity="pop0/3/RS/v"/> 
+            <OutputColumn id="v_pop0_4_RS_v" quantity="pop0/4/RS/v"/> 
+            <OutputColumn id="v_pop0_5_RS_v" quantity="pop0/5/RS/v"/> 
+            <OutputColumn id="v_pop0_6_RS_v" quantity="pop0/6/RS/v"/> 
+        </OutputFile>
+        
+        <OutputFile id="Volts_file__pop1" fileName="Sim_SimpleNet.pop1.v.dat">
+            <OutputColumn id="v_pop1_0_RS_v" quantity="pop1/0/RS/v"/> 
+            <OutputColumn id="v_pop1_1_RS_v" quantity="pop1/1/RS/v"/> 
+            <OutputColumn id="v_pop1_2_RS_v" quantity="pop1/2/RS/v"/> 
+            <OutputColumn id="v_pop1_3_RS_v" quantity="pop1/3/RS/v"/> 
+            <OutputColumn id="v_pop1_4_RS_v" quantity="pop1/4/RS/v"/> 
+            <OutputColumn id="v_pop1_5_RS_v" quantity="pop1/5/RS/v"/> 
+            <OutputColumn id="v_pop1_6_RS_v" quantity="pop1/6/RS/v"/> 
+        </OutputFile>
+        
+    </Simulation>
+
+</Lems>
