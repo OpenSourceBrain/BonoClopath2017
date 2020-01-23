@@ -7,10 +7,7 @@
 
     <ComponentType name="clopathPlasticSynapse"
                    extends="expOneSynapse"
-                   description="Biexponential synapse that allows for
-				optional block and plasticity
-				mechanisms, which can be expressed as
-				child elements.">
+                   description="...">
        
         <Property name="weight" dimension="none" defaultValue="1"/> 
        
@@ -48,14 +45,12 @@
                              reduce="multiply"
                              exposure="blockFactor"/>
             
-            
             <DerivedVariable name="i" exposure="i" dimension="current" value="g * (erev - v)" />
 
         </Dynamics>
     </ComponentType>
     
     <Dimension name="per_voltage2" m="-2" l="-4" t="6" i="2"/>
-
     <Unit symbol="per_mV2" dimension="per_voltage2" power="6"/>
     
 
